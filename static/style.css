@@ -1,0 +1,87 @@
+html * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #485859;
+}
+
+.navbar-top {
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.navbar-top, .navbar-background, .nav-list {
+    border: 0.5rem solid;
+    border-color: gainsboro;
+    background-color: gainsboro;
+}
+
+img {
+    border: 0.5rem solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-color: gainsboro;
+    background-color: gainsboro;
+}
+
+.header {
+    border: 0.5rem solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-color: gainsboro;
+    background-color: gainsboro;
+}
+
+.drink-header {
+    border: 0.5rem solid;
+    margin: auto;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+    border-color: gainsboro;
+    background-color: gainsboro;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.gen-search {
+    border: 0.5rem solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-color: gainsboro;
+    background-color: gainsboro;
+}
+
+.block_link {
+    font: bold 15px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 4px 2px 4px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.block_link2 {
+    font: bold 12px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 4px 2px 4px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+

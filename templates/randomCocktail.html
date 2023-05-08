@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+        {% for drink in returnDrink %}
+            <div class="drink-header">
+                <h2>{{drink.strDrink}}</h2>
+            </div>
+            <div class="navbar-top">
+                <p>{{drink.strAlcoholic}}</p>
+                <p>{{drink.strGlass}}</p>
+                <img src="{{drink.strDrinkThumb}}">
+                <ul>
+                    {% for item in result_list %}
+                        <li>{{item[0]}} x {{item[1]}}</li>
+                    {% endfor %}
+                </ul>
+                <p>{{drink.strInstructions}}</p>
+                <form method="POST" action="/{{drink.strDrink}}/add">
+                    <button>FAVORITE THIS DRINK</button>
+                </form>
+            </div>
+        {% endfor %}
+{% endblock %}

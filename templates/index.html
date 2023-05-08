@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Hour</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="master-div">
+        <div class="navbar-top">
+            <nav class="navbar-background">
+                <div class="nav-list">
+                    <a href='/' class="block_link">Home</a>
+                    {% if not g.user %}
+                        <a href='/register' class="block_link">Create An Account</a>
+                        <a href='/login' class="block_link">Login</a>
+                    {% else %}
+                        <a href='/logout' class="block_link">Logout</a>
+                        <a href='/user/{{ g.user.id }}' class="block_link">Profile</a>
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
+        <div class="header">
+            <h1>COCKTAIL HOUR</h1>
+        </div>
+        {% block content %}
+            <div class="image">
+                {% for drink in dataDrink %}
+                    <img src="{{drink.strDrinkThumb}}">
+                {% endfor %}
+            </div>
+            <div class="gen-search">
+                <a href="/generate-random" class="block_link2">UP FOR ANYTHING?</a>
+                <a href="/search" class="block_link2">SEARCH BY NAME</a>
+                <a href="/searchbyliquor" class="block_link2">SEARCH BY LIQUOR</a>
+            </div>
+            <div class="navbar-top">
+                <h3>Select From Popular Cocktails</h3>
+                <ul style="list-style: none;">
+                    {% for drink in  returnDrink %}
+                        <li><a href='/{{ drink.strDrink }}'>{{drink.strDrink}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            
+        {% endblock %}
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

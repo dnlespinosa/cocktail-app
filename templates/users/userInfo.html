@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="navbar-top">
+        <h2>Welcome to your account {{user.username}}</h2>
+        {% for drink in drinks %}
+            <a href="/{{drink.name}}">{{ drink.name }}</a>
+        {% endfor %}
+    </div>
+{% endblock %}

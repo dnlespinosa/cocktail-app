@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="header">
+        <h1>Search Results</h1>
+    </div>
+    <div class="navbar-top">
+        <ul>
+            {% for drink in returnDrink %}
+                <li><a href='/{{drink.strDrink}}'>{{drink.strDrink}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+        
+    
+{% endblock %}

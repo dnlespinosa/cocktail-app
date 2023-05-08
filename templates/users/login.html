@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="navbar-top">
+        <h2>Login To Your Account</h2>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+            {% for field in form if field.widget.input_type != 'hidden' %}
+                {% for error in field.errors %}
+                    <div>{{error}}</div>
+                {% endfor %}
+                {{ field(placeholder=field.label.text, class='form-control') }}
+            {% endfor %}
+
+            <button>Login</button>
+        </form>
+    </div>  
+{% endblock %}
